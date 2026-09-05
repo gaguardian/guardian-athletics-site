@@ -56,7 +56,11 @@ export default function Home() {
           </div>
 
           <div className="hero-visual">
-            <PlaceholderImage label="Hero photo placeholder" className="hero-photo" />
+            <img
+              src="/images/home-hero-rf2.png"
+              alt="Guardian Athletics coaches standing together in the gym"
+              className="hero-photo hero-photo--image"
+            />
             <button className="play-button" type="button" aria-label="Play story video">
               ▶
             </button>
