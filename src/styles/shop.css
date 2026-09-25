@@ -1,0 +1,532 @@
+/* =========================================================
+   SHOP PAGE
+   ========================================================= */
+
+.shop-hero {
+  width: min(100%, var(--max));
+  margin-inline: auto;
+
+  display: grid;
+  grid-template-columns: 0.82fr 1.18fr;
+
+  min-height: 560px;
+  overflow: hidden;
+
+  background: #05090b;
+}
+
+.shop-hero__copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 68px 50px 68px 58px;
+}
+
+.shop-hero__copy h1 {
+  margin: 0;
+
+  max-width: 600px;
+
+  font-size: clamp(4.4rem, 7vw, 7.4rem);
+  line-height: 0.84;
+}
+
+.shop-hero__copy h1 span {
+  color: var(--gold-light);
+}
+
+.shop-hero__lede {
+  max-width: 610px;
+
+  margin: 26px 0 30px;
+
+  color: #dedbd4;
+
+  font-size: 1.04rem;
+  line-height: 1.7;
+}
+
+.shop-hero__copy .button {
+  align-self: flex-start;
+}
+
+.shop-hero__visual {
+  position: relative;
+  min-height: 560px;
+}
+
+.shop-hero__visual::after {
+  content: '';
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 9, 11, 0.56) 0%,
+      rgba(5, 9, 11, 0.05) 28%,
+      rgba(5, 9, 11, 0.18) 100%
+    );
+
+  pointer-events: none;
+}
+
+.shop-hero__photo {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  border: 0;
+}
+
+
+/* =========================================================
+   SHARED SHOP HEADINGS
+   ========================================================= */
+
+.shop-section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 24px;
+}
+
+.shop-section-heading h2,
+.shop-mission__copy h2 {
+  margin: 0;
+
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(3rem, 5vw, 5rem);
+  line-height: 0.94;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   CATEGORIES
+   ========================================================= */
+
+.shop-categories {
+  width: min(100%, var(--max));
+  margin-inline: auto;
+
+  padding: 40px 36px 46px;
+
+  background: rgba(5, 9, 11, 0.97);
+}
+
+.shop-category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 16px;
+}
+
+.shop-category-card {
+  overflow: hidden;
+
+  border: 1px solid rgba(228, 161, 44, 0.34);
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(15, 21, 24, 0.98),
+      rgba(7, 12, 14, 0.98)
+    );
+}
+
+.shop-category-card__photo {
+  min-height: 255px;
+
+  border: 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.shop-category-card__body {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+
+  gap: 18px;
+
+  padding: 18px;
+}
+
+.shop-category-card h3 {
+  margin: 0;
+
+  font-size: 1.8rem;
+
+  text-transform: uppercase;
+}
+
+.shop-category-card p {
+  margin: 5px 0 0;
+
+  color: var(--muted);
+
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+.shop-category-card__arrow {
+  flex: 0 0 auto;
+
+  border: 0;
+
+  background: transparent;
+  color: var(--gold-light);
+
+  font-size: 1.7rem;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   FEATURED PRODUCTS
+   ========================================================= */
+
+.featured-products {
+  width: min(100%, var(--max));
+  margin-inline: auto;
+
+  padding: 40px 36px 48px;
+
+  background: rgba(5, 9, 11, 0.97);
+}
+
+.featured-products__heading {
+  align-items: center;
+}
+
+.shop-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.shop-filter-bar button {
+  min-height: 38px;
+  padding: 0 14px;
+
+  border: 1px solid rgba(228, 161, 44, 0.28);
+
+  background: #080d0f;
+  color: #d8d5cf;
+
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+.shop-filter-bar button.is-active {
+  background:
+    linear-gradient(
+      180deg,
+      #f3bc50 0%,
+      #df951d 100%
+    );
+
+  color: #090b0c;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+
+  gap: 16px;
+}
+
+.product-card {
+  overflow: hidden;
+
+  border: 1px solid rgba(228, 161, 44, 0.3);
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(15, 21, 24, 0.98),
+      rgba(7, 12, 14, 0.98)
+    );
+}
+
+.product-card__photo {
+  min-height: 245px;
+
+  border: 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.product-card__body {
+  display: flex;
+  flex-direction: column;
+
+  padding: 16px;
+}
+
+.product-card__category {
+  margin: 0 0 5px;
+
+  color: var(--gold-light);
+
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.product-card h3 {
+  margin: 0;
+
+  font-size: 1.45rem;
+
+  text-transform: uppercase;
+}
+
+.product-card__price {
+  margin: 8px 0 10px;
+
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.35rem;
+}
+
+.product-card__rating {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  margin-bottom: 16px;
+}
+
+.product-card__rating span {
+  color: var(--gold-light);
+
+  letter-spacing: 0.08em;
+}
+
+.product-card__rating small {
+  color: var(--muted);
+}
+
+.product-card__button {
+  width: 100%;
+
+  margin-top: auto;
+}
+
+.shop-empty {
+  padding: 44px 0;
+
+  text-align: center;
+
+  color: var(--muted);
+}
+
+.shop-view-all {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 24px;
+}
+
+
+/* =========================================================
+   SHOP MISSION
+   ========================================================= */
+
+.shop-mission {
+  width: min(100%, var(--max));
+  margin-inline: auto;
+
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+
+  min-height: 420px;
+
+  background: #070c0e;
+}
+
+.shop-mission__visual {
+  position: relative;
+
+  min-height: 420px;
+}
+
+.shop-mission__photo {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  border: 0;
+}
+
+.shop-mission__copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 48px;
+}
+
+.shop-mission__copy > p:not(.eyebrow) {
+  margin: 22px 0 28px;
+
+  color: #d7d3cb;
+
+  line-height: 1.7;
+}
+
+.shop-mission__copy .button {
+  align-self: flex-start;
+}
+
+
+/* =========================================================
+   SHOP BENEFITS
+   ========================================================= */
+
+.shop-benefits {
+  width: min(100%, var(--max));
+  margin-inline: auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  background: #05090b;
+}
+
+.shop-benefits article {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+
+  gap: 16px;
+
+  padding: 28px 24px;
+
+  border-right: 1px solid rgba(228, 161, 44, 0.28);
+}
+
+.shop-benefits article:last-child {
+  border-right: 0;
+}
+
+.shop-benefit__icon {
+  color: var(--gold-light);
+
+  font-size: 2rem;
+}
+
+.shop-benefits h3 {
+  margin: 0;
+
+  font-size: 1.35rem;
+
+  text-transform: uppercase;
+}
+
+.shop-benefits p {
+  margin: 5px 0 0;
+
+  color: var(--muted);
+
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1180px) {
+  .shop-category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .shop-benefits {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 880px) {
+  .shop-hero,
+  .shop-mission {
+    grid-template-columns: 1fr;
+  }
+
+  .shop-hero__copy {
+    padding: 60px 26px 42px;
+  }
+
+  .shop-hero__visual {
+    min-height: 420px;
+  }
+
+  .shop-section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .shop-mission__visual {
+    min-height: 340px;
+  }
+
+  .shop-mission__copy {
+    padding: 42px 26px;
+  }
+}
+
+@media (max-width: 620px) {
+  .shop-hero__copy h1 {
+    font-size: clamp(3.6rem, 17vw, 5.2rem);
+  }
+
+  .shop-hero__visual {
+    min-height: 340px;
+  }
+
+  .shop-categories,
+  .featured-products {
+    padding-inline: 20px;
+  }
+
+  .shop-category-grid,
+  .product-grid,
+  .shop-benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .shop-category-card__photo,
+  .product-card__photo {
+    min-height: 320px;
+  }
+
+  .shop-benefits article {
+    border-right: 0;
+    border-bottom: 1px solid rgba(228, 161, 44, 0.22);
+  }
+
+  .shop-benefits article:last-child {
+    border-bottom: 0;
+  }
+}

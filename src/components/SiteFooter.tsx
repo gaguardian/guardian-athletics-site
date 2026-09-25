@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function SiteFooter() {
   return (
     <footer className="site-footer" id="footer">
@@ -8,14 +10,14 @@ export default function SiteFooter() {
       </div>
 
       <nav className="footer-nav" aria-label="Footer navigation">
-        <a href="#top">Home</a>
-        <a href="#classes">Classes</a>
-        <a href="#classes">Schedule</a>
-        <a href="#stories">Memberships</a>
-        <a href="#story">Coaches</a>
-        <a href="#story">About</a>
-        <a href="#stories">Shop</a>
-        <a href="#footer">Contact</a>
+        <Link to="/">Home</Link>
+        <Link to="/classes">Classes</Link>
+        <Link to="/schedule">Schedule</Link>
+        <Link to="/memberships">Memberships</Link>
+        <Link to="/coaches">Coaches</Link>
+        <Link to="/about">About</Link>
+        <Link to="/shop">Shop</Link>
+        <Link to="/contact">Contact</Link>
       </nav>
 
       <div className="footer-meta">
