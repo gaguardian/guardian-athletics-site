@@ -29,7 +29,7 @@ export default function Classes() {
             {filters.map((filter, index) => (
               <button className={`class-filter ${index === 0 ? 'class-filter--active' : ''}`} type="button" key={filter}>{filter}</button>
             ))}
-            <Link className="class-filter class-filter--schedule" to="/#classes">▣ View Schedule</Link>
+            <Link className="class-filter class-filter--schedule" to="/schedule">▣ View Schedule</Link>
           </div>
 
           <div className="classes-card-grid">
@@ -60,8 +60,8 @@ export default function Classes() {
             <h2>A community.<br />A standard.</h2>
             <p>Our classes are open to anyone willing to put in the work. You don&apos;t have to be an elite athlete — just someone who wants to get better. Here, you&apos;ll find expert coaching, a supportive community, and a higher standard.</p>
             <div className="button-row">
-              <button className="button button--primary" type="button">Join a Class <span aria-hidden="true">→</span></button>
-              <Link className="button button--outline" to="/#classes">View Schedule</Link>
+              <Link className="button button--primary" to="/schedule">Join a Class <span aria-hidden="true">→</span></Link>
+              <Link className="button button--outline" to="/schedule">View Schedule</Link>
             </div>
           </div>
         </section>
@@ -73,8 +73,8 @@ export default function Classes() {
           <div className="classes-final-cta__copy">
             <div><h2>Ready to train?</h2><p>Your next class is just a click away.</p></div>
             <div className="button-row">
-              <Link className="button button--primary" to="/#classes">View Schedule <span aria-hidden="true">→</span></Link>
-              <button className="button button--outline" type="button">Join a Class</button>
+              <Link className="button button--primary" to="/schedule">View Schedule <span aria-hidden="true">→</span></Link>
+              <Link className="button button--outline" to="/schedule">Join a Class</Link>
             </div>
           </div>
         </section>

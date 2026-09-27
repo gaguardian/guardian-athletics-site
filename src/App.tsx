@@ -4,6 +4,7 @@ import Classes from './pages/Classes'
 import Schedule from './pages/Schedule'
 import Memberships from './pages/Memberships'
 import Coaches from './pages/Coaches'
+import PersonalTraining from './pages/PersonalTraining'
 import About from './pages/About'
 import Shop from './pages/Shop'
 import Contact from './pages/Contact'
@@ -17,6 +18,7 @@ function App() {
       <Route path="/schedule" element={<Schedule />} />
       <Route path="/memberships" element={<Memberships />} />
       <Route path="/coaches" element={<Coaches />} />
+      <Route path="/personal-training" element={<PersonalTraining />} />
       <Route path="/about" element={<About />} />
       <Route path="/shop" element={<Shop />} />
       <Route path="/contact" element={<Contact />} />

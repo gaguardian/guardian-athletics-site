@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import PlaceholderImage from '../components/PlaceholderImage'
 import SiteFooter from '../components/SiteFooter'
 import SiteHeader from '../components/SiteHeader'
@@ -46,9 +47,9 @@ export default function Home() {
             </p>
 
             <div className="button-row">
-              <a className="button button--primary" href="#classes">
+              <Link className="button button--primary" to="/classes">
                 Join a Class <span aria-hidden="true">→</span>
-              </a>
+              </Link>
               <a className="button button--outline" href="#story">
                 Watch Video
               </a>
@@ -56,11 +57,7 @@ export default function Home() {
           </div>
 
           <div className="hero-visual">
-            <img
-              src="/images/home-hero-rf2.png"
-              alt="Guardian Athletics coaches standing together in the gym"
-              className="hero-photo hero-photo--image"
-            />
+            <PlaceholderImage label="Hero photo placeholder" className="hero-photo" />
             <button className="play-button" type="button" aria-label="Play story video">
               ▶
             </button>
@@ -74,9 +71,9 @@ export default function Home() {
               <p className="eyebrow">Show up. Work. Belong.</p>
               <h2>Upcoming Classes</h2>
             </div>
-            <a className="text-link" href="#classes">
+            <Link className="text-link" to="/classes">
               View full schedule →
-            </a>
+            </Link>
           </div>
 
           <div className="class-grid">
@@ -93,9 +90,9 @@ export default function Home() {
                   </div>
                   <div className="class-footer">
                     <strong>{item.price}</strong>
-                    <a className="button button--primary button--small" href="#footer">
+                    <Link className="button button--primary button--small" to="/schedule">
                       Reserve Your Spot
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </article>
@@ -115,9 +112,9 @@ export default function Home() {
               and in life. We train with purpose, hold ourselves to a higher
               standard, and create a community that refuses to be average.
             </p>
-            <a className="button button--outline" href="#footer">
+            <Link className="button button--outline" to="/about">
               Our Story <span aria-hidden="true">→</span>
-            </a>
+            </Link>
           </div>
 
           <div className="story-image-wrap story-image-wrap--right">
@@ -131,9 +128,9 @@ export default function Home() {
               <p className="eyebrow">Real people. Real progress.</p>
               <h2>Member Stories</h2>
             </div>
-            <a className="text-link" href="#stories">
+            <Link className="text-link" to="/memberships">
               See more stories →
-            </a>
+            </Link>
           </div>
 
           <div className="story-grid">
@@ -157,12 +154,12 @@ export default function Home() {
           </div>
 
           <div className="button-row">
-            <a className="button button--primary" href="#classes">
+            <Link className="button button--primary" to="/classes">
               Join a Class <span aria-hidden="true">→</span>
-            </a>
-            <a className="button button--outline" href="#classes">
+            </Link>
+            <Link className="button button--outline" to="/schedule">
               View Schedule
-            </a>
+            </Link>
           </div>
         </section>
       </main>

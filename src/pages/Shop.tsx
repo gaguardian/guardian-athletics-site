@@ -170,9 +170,9 @@ export default function Shop() {
               mind, and life.
             </p>
 
-            <button className="button button--primary" type="button">
+            <a className="button button--primary" href="#featured-products">
               Shop with Purpose <span aria-hidden="true">→</span>
-            </button>
+            </a>
           </div>
         </section>
 

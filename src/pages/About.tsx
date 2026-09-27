@@ -109,9 +109,9 @@ export default function About() {
               unwavering commitment to higher standards.
             </p>
 
-            <button className="button button--primary" type="button">
+            <Link className="button button--primary" to="/coaches">
               Our Philosophy <span aria-hidden="true">→</span>
-            </button>
+            </Link>
           </div>
 
           <div className="about-values">
@@ -158,7 +158,7 @@ export default function About() {
               in lifting each other up.
             </p>
 
-            <Link className="button button--primary" to="/schedule">
+            <Link className="button button--primary" to="/memberships">
               Become a Part of It <span aria-hidden="true">→</span>
             </Link>
           </div>
@@ -175,7 +175,7 @@ export default function About() {
             <h2>See what makes our community different.</h2>
           </div>
 
-          <Link className="button button--primary" to="/schedule">
+          <Link className="button button--primary" to="/classes">
             Join a Class <span aria-hidden="true">→</span>
           </Link>
         </section>

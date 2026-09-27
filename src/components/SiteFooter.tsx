@@ -15,6 +15,7 @@ export default function SiteFooter() {
         <Link to="/schedule">Schedule</Link>
         <Link to="/memberships">Memberships</Link>
         <Link to="/coaches">Coaches</Link>
+        <Link to="/personal-training">Personal Training</Link>
         <Link to="/about">About</Link>
         <Link to="/shop">Shop</Link>
         <Link to="/contact">Contact</Link>

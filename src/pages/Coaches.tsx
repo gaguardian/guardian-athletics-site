@@ -113,9 +113,9 @@ export default function Coaches() {
               are supported, challenged, and believed in.
             </p>
 
-            <button className="button button--primary" type="button">
+            <Link className="button button--primary" to="/about">
               Our Philosophy <span aria-hidden="true">→</span>
-            </button>
+            </Link>
           </div>
         </section>
 
